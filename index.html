@@ -1,44 +1,36 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>상세페이지</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notion Video Loop Widget</title>
   <style>
-    body {
+    html, body {
       margin: 0;
-      background-color: #fdfdfd;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      overflow-x: hidden;
+      padding: 0;
+      overflow: hidden;
+      background: transparent;
     }
-    img, video {
+    video {
       width: 100%;
-      max-width: 860px;
-      display: block;
+      height: 100%;
+      object-fit: cover;
     }
   </style>
 </head>
 <body>
-  <img src="상세페이지1.png" alt="상세1">
-  <video
-    src="상세페이지2.mp4"
-    autoplay
-    muted
-    loop
-    playsinline
-    preload="auto"
-    style="outline:none;"
-  ></video>
-  <img src="상세페이지3.png" alt="상세3">
+  <!-- 자동재생 + 반복 + 음소거 + 컨트롤 숨김 -->
+  <video id="myVideo" autoplay muted loop playsinline>
+    <source src="YOUR_VIDEO_URL.mp4" type="video/mp4">
+    브라우저가 동영상을 지원하지 않습니다.
+  </video>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const video = document.querySelector('video');
-      const tryPlay = () => video.play().catch(()=>{});
-      tryPlay();
-      document.body.addEventListener('touchstart', tryPlay, { once: true });
+    const video = document.getElementById("myVideo");
+    // 혹시 브라우저 정책으로 자동재생이 막히면 다시 시도
+    video.addEventListener("pause", () => {
+      video.muted = true;
+      video.play();
     });
   </script>
 </body>
