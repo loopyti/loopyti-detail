@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Notion Video Loop Widget</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Loop</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      overflow: hidden;
       background: transparent;
     }
     video {
@@ -19,19 +18,8 @@
   </style>
 </head>
 <body>
-  <!-- 자동재생 + 반복 + 음소거 + 컨트롤 숨김 -->
-  <video id="myVideo" autoplay muted loop playsinline>
-    <source src="YOUR_VIDEO_URL.mp4" type="video/mp4">
-    브라우저가 동영상을 지원하지 않습니다.
+  <video autoplay muted loop playsinline>
+    <source src="ch1.mp4" type="video/mp4">
   </video>
-
-  <script>
-    const video = document.getElementById("myVideo");
-    // 혹시 브라우저 정책으로 자동재생이 막히면 다시 시도
-    video.addEventListener("pause", () => {
-      video.muted = true;
-      video.play();
-    });
-  </script>
 </body>
 </html>
