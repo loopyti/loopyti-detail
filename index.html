@@ -1,11 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Detail Page</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 860px; /* 전체 상세페이지 폭 */
+      display: flex;
+      flex-direction: column;
+      gap: 0; /* 요소 간 간격 0 */
+    }
+
+    img,
+    video {
+      width: 860px;
+      height: auto;
+      display: block;
+      margin: 0;
+      padding: 0;
+    }
+
+    video {
+      autoplay;
+      muted;
+      loop;
+      playsinline;
+    }
+  </style>
 </head>
+
 <body>
-    
+  <div class="container">
+    <img src="1.png" />
+    <img src="2.png" />
+
+    <video src="3.mp4" autoplay muted loop playsinline></video>
+
+    <img src="4.png" />
+    <img src="5.png" />
+
+    <video src="6.mp4" autoplay muted loop playsinline></video>
+    <video src="7.mp4" autoplay muted loop playsinline></video>
+    <video src="8.mp4" autoplay muted loop playsinline></video>
+
+    <img src="9.png" />
+    <img src="10.png" />
+    <img src="11.png" />
+  </div>
 </body>
-</html><iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/s64jynz2dYUcjuskeHoUlN/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?page-id=0%3A1&node-id=1-3307&viewport=-526%2C-122%2C0.14&scaling=min-zoom&content-scaling=fixed&embed-host=share" allowfullscreen></iframe>
+</html>
