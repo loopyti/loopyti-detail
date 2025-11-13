@@ -3,37 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Figma Embed Page</title>
+  <title>Figma Full Page</title>
   <style>
     html, body {
       margin: 0;
       padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      background: #ffffff;
-    }
-    .wrapper {
-      width: 100%;
-      height: 30000px; /* 🔥 요청대로 수정 */
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
       background: #ffffff;
     }
     iframe {
       width: 100%;
-      height: 30000px; /* 🔥 요청대로 수정 */
+      min-height: 35200px; /* 🔥 모모 페이지 실측 높이 적용 */
       border: none;
+      display: block;
     }
   </style>
 </head>
 <body>
-  <div class="wrapper">
-    <iframe
-      src="https://embed.figma.com/proto/rDEvsswr0KxXT37uQ9IEOz/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?page-id=0%3A1&node-id=301-1048&viewport=-321%2C-2614%2C0.11&scaling=min-zoom&content-scaling=fixed&embed-host=share"
-      allowfullscreen
-    ></iframe>
-  </div>
+  <iframe
+    src="https://embed.figma.com/proto/rDEvsswr0KxXT37uQ9IEOz/%EC%A0%9C%EB%AA%A9-%EC%97%86%EC%9D%8C?page-id=0%3A1&node-id=301-1048&viewport=-321%2C-2614%2C0.11&scaling=min-zoom&content-scaling=fixed&embed-host=share"
+    allowfullscreen
+  ></iframe>
 </body>
 </html>
