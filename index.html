@@ -2,9 +2,14 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
   <title>Detail Page</title>
+
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       padding: 0;
@@ -15,6 +20,7 @@
       width: 100%;
       max-width: 860px;
       margin: 0 auto;
+      padding: 0 16px;        /* 모바일 여백 fix */
       display: flex;
       flex-direction: column;
       gap: 0;
@@ -22,11 +28,15 @@
 
     img,
     video {
-      width: 100%;     /* 모바일 대응 */
+      width: 100%;
       height: auto;
       display: block;
-      margin: 0;
-      padding: 0;
+    }
+
+    /* iOS Safari 비디오 확대 방지 */
+    video {
+      object-fit: contain;
+      background: #0000;
     }
   </style>
 </head>
